@@ -1,0 +1,29 @@
+- name: "build the dockerproxy image"
+  containers.podman.podman_image:
+    name:  "dockerproxy"
+    path:  "</path/to/Dockerfile>"
+    state: "build"
+
+- name: "create the dockerproxy container"
+  containers.podman.podman_container:
+    name:  "dockerproxy"
+    image: "dockerproxy:latest"
+    mount:
+    - "type=bind,source=</path/to/docker.sock>,destination=/docker/docker.sock,ro"
+    volume:
+    - "<proxied_socket_vol>:/proxied/"
+    network: "none"
+    env:
+      CONTAINERS: 1
+      SERVICES:   1
+      NETWORKS:   1
+      TASKS:      1
+    hostname: "dockerproxy"
+    cap_drop:
+    - "ALL"
+    cap_add:
+    - "CAP_DAC_OVERRIDE"
+    security_opt:
+    - "label=disable"
+    restart_policy: "unless-stopped"
+    state: "started"
