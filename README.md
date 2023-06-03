@@ -51,6 +51,8 @@ by setting the relative environment variable to 1.
 | TASKS        | Manage swarm containers (also known as tasks)                                                                    | 0       |
 | VOLUMES      | Manage docker volumes                                                                                            | 0       |
 
+Any other endpoint that is not listed here will be rejected by default to prevent new or unknown endpoint from being accessed without permission.
+
 ## Usage
 
 The container must be started with the following parameters:
