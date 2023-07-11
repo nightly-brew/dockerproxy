@@ -1,6 +1,6 @@
 # Dockerproxy
 
-Dockerproxy is a custom fork of the docker-socket-proxy container from texnativa.
+Dockerproxy is a custom fork of the docker-socket-proxy container from tecnativa.
 
 It has been configured to only use sockets, which allows the container to be operated with 
 its network stack disabled, for added security.
