@@ -1,0 +1,13 @@
+steps:
+- name: build and push to registry
+  image: docker.io/woodpeckerci/plugin-docker-buildx
+  settings:
+    repo: gitea.moonlit-room.org/nightly_brew/dockerproxy
+    platform: linux/amd64
+    tag: latest
+    logins:
+    - registry: https://gitea.moonlit-room.org
+      username:
+        from_secret: registry_username
+      password:
+        from_secret: registry_password
