@@ -1,21 +1,20 @@
 steps:
-- name: build and push to gitea
-  image: docker.io/woodpeckerci/plugin-docker-buildx
-  settings:
-    repo: gitea.moonlit-room.org/nightly_brew/dockerproxy
-    platform: linux/amd64
-    tag: latest
-    logins:
-    - registry: https://gitea.moonlit-room.org
-      username:
-        from_secret: gitea_registry_username
-      password:
-        from_secret: gitea_registry_password
+# - name: build and push to gitea
+#   image: docker.io/woodpeckerci/plugin-docker-buildx
+#   settings:
+#     repo: gitea.moonlit-room.org/nightly_brew/dockerproxy
+#     platform: linux/amd64
+#     tag: latest
+#     logins:
+#     - registry: https://gitea.moonlit-room.org
+#       username:
+#         from_secret: gitea_registry_username
+#       password:
+#         from_secret: gitea_registry_password
 
 - name: build and push to github
   image: docker.io/woodpeckerci/plugin-docker-buildx
   settings:
-    repo: ghcr.io/nightly_brew/dockerproxy
     platform: linux/amd64
     tag: latest
     logins:
