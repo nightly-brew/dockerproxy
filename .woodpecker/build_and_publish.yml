@@ -16,7 +16,6 @@ steps:
   image: docker.io/woodpeckerci/plugin-docker-buildx
   settings:
     platform: linux/amd64
-    tag: latest
     logins:
     - registry: https://ghcr.io
       username:
