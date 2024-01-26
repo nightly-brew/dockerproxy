@@ -21,7 +21,7 @@ steps:
     default_labels: false
     labels:
     - "org.opencontainers.image.source=https://github.com/nightly_brew/dockerproxy.git"
-    - "org.opencontainers.image.url=https://github.com/nightly_brew/dockerproxy"
+    - "org.opencontainers.image.url=https://ghcr.io/nightly_brew/dockerproxy"
     logins:
     - registry: https://ghcr.io
       username:
