@@ -18,10 +18,6 @@ steps:
     repo: ghcr.io/nightly_brew/dockerproxy
     platform: linux/amd64
     tag: latest
-    default_labels: false
-    labels:
-    - "org.opencontainers.image.source=https://github.com/nightly_brew/dockerproxy.git"
-    - "org.opencontainers.image.url=https://ghcr.io/nightly_brew/dockerproxy"
     logins:
     - registry: https://ghcr.io
       username:
