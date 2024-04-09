@@ -1,4 +1,4 @@
-FROM docker.io/library/haproxy:2.9.6-alpine
+FROM docker.io/library/haproxy:2.9.7-alpine
 
 # Switch to the root user and DO NOT CHANGE BACK! THE ORIGINAL SOCKET CAN BE ACCESSED ONLY IF THE USER RUNNING HAPROXY IS ROOT!!!
 USER root
