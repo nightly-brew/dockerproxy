@@ -1,3 +1,7 @@
+when:
+- event: "push"
+  branch: "main"
+
 steps:
 - name: build and push to registries
   image: docker.io/woodpeckerci/plugin-docker-buildx
