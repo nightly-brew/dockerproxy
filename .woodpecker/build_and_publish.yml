@@ -1,7 +1,7 @@
 when:
 - event: "push"
   branch: "main"
-- path:
+  path:
     exclude: ['README.md', 'renovate.json', 'examples/**']
 
 steps:
