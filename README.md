@@ -2,6 +2,8 @@
 
 ![](https://woodpeckerci.moonlit-room.org/api/badges/2/status.svg)
 
+## What is it
+
 Dockerproxy is a custom fork of the docker-socket-proxy container from tecnativa.
 
 It has been configured to only use sockets, which allows the container to be operated with 
